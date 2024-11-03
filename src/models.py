@@ -18,6 +18,7 @@ class Car(BaseModel):
     price: Decimal
     date_start: datetime
     status: CarStatus
+    #flg_del: str
 
     def index(self) -> str:
         return self.vin
@@ -27,7 +28,8 @@ class Model(BaseModel):
     id: int
     name: str
     brand: str
-
+    #flg_del: str
+    
     def index(self) -> str:
         return str(self.id)
 
@@ -37,6 +39,7 @@ class Sale(BaseModel):
     car_vin: str
     sales_date: datetime
     cost: Decimal
+    #flg_del: str
 
     def index(self) -> str:
         return self.car_vin
